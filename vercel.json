@@ -1,5 +1,5 @@
 {
-    "devCommand": "python -m uvicorn main:app --reload",
+    "devCommand": "python -m uvicorn api/index:app --reload",
     "builds": [
         {
           "src": "app.py",
