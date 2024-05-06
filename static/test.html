@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Copy Text to Clipboard</title>
+</head>
+<body>
+
+<textarea id="myTextarea">Text to copy</textarea><br>
+<button onclick="copyToClipboard()">Copy Text</button>
+
+<script>
+function copyToClipboard() {
+  var textarea = document.getElementById("myTextarea");
+  textarea.select();
+  document.execCommand("copy");
+  alert("Text copied to clipboard!");
+}
+</script>
+
+</body>
+</html>

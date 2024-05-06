@@ -1,0 +1,27 @@
+body {
+    padding: 25px;
+    background-color: white;
+    color: black;
+    font-size: 25px;
+  }
+
+.d-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+}
+
+.m-mobile {
+    margin-left: 3rem
+}
+
+@media (max-width: 1200px) {
+    .d-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .m-mobile {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        font-size: 20px;
+    }
+}
