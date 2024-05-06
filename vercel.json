@@ -1,5 +1,5 @@
 {
-    "devCommand": "python -m uvicorn index:app --reload",
+    "devCommand": "python -m uvicorn index:app",
     "builds": [
         {
           "src": "app.py",
@@ -10,10 +10,18 @@
           }
         }
       ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "index.py"
-      }
-    ]
-  }
+      "routes": [
+        {
+          "src": "/static/(.*)",
+          "dest": "static/$1"
+        },
+        {
+          "src": "/templates/(.*)",
+          "dest": "templates/$1"
+        },
+        {
+          "src": "/(.*)",
+          "dest": "index.py"
+        }
+      ]
+    }
